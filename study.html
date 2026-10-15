@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Учебные сайты</title>
+<link href="styleIndex.css" rel="stylesheet" type="text/css">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+	<header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Логотип" class="logo__img">
+                <span class="logo__text">Мой сайт</span>
+            </a>
+
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Главная</a></li>
+                    <li><a href="projects.html" class="nav__link">Проекты</a></li>
+                    <li><a href="study.html" class="nav__link active">Учебные сайты</a></li>
+                    <li class="nav__item nav__item--dropdown">
+                        <a href="photos.html" class="nav__link">
+                            Фотоальбомы <span class="caret">▾</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="characters.html">Любимые персонажи</a></li>
+                            <li><a href="books.html">Любимые книги</a></li>
+                            <li><a href="anime.html">Любимые аниме</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="hero1 container">
+            <h1 class="page-title">Учебные сайты</h1>
+            <p class="page-lead">
+                Ссылки на веб-приложения, которые я опубликовал в интернете
+                в рамках курса «Интернет-программирование».
+            </p>
+
+            <ul class="link-list">
+
+                <div class="card">
+                    <div class="link-item__body">
+                        <h2 class="link-item__title">Транспорт г. Челябинска</h2>
+                        <p class="link-item__desc">
+                            Таблица маршрутов и остановок общественного транспорта,
+                            реализованная на PHP и MySQL.
+                        </p>
+                        <a href="http://example.com/transport" target="_blank" rel="noopener" class="link-item__url">
+                            Перейти на сайт →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="link-item__body">
+                        <h2 class="link-item__title">Фонтейн</h2>
+                        <p class="link-item__desc">
+                            Сайт разработанный на WordPress по предмету Практикум по виду профессиональной деятельности.
+                        </p>
+                        <a href="http://a90009vv.beget.tech/" target="_blank" rel="noopener" class="link-item__url">
+                            Перейти на сайт →
+                        </a>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </main>
+
+     <footer class="footer">
+        <div class="container">
+            <p>© 2026 Корнева А.С. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>

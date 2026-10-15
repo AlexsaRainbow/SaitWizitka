@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Главная</title>
+<link href="styleIndex.css" rel="stylesheet" type="text/css">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+	<!-- Шапка -->
+    <header class="header">
+        <div class="container header__inner">
+
+            <!-- Лого + название -->
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Логотип" class="logo__img">
+                <span class="logo__text">Мой сайт</span>
+            </a>
+
+            <!-- Меню (чистый CSS, без JS) -->
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link active">Главная</a></li>
+                    <li><a href="projects.html" class="nav__link">Проекты</a></li>
+                    <li><a href="study.html" class="nav__link">Учебные сайты</a></li>
+
+                    <!-- Выпадающий пункт "Фотоальбомы" -->
+                    <li class="nav__item nav__item--dropdown">
+                        <a href="photos.html" class="nav__link">
+                            Фотоальбомы <span class="caret">▾</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="characters.html">Любимые персонажи</a></li>
+                            <li><a href="books.html">Любимые книги</a></li>
+                            <li><a href="anime.html">Любимые аниме</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- Контент -->
+    <main class="main">
+        <div class="hero container">
+
+            <div class="hero__photo">
+                <img src="img/photo.jpg" alt="Моё фото">
+            </div>
+
+            <div class="hero__info">
+                <h1 class="hero__title">Корнева Александра Сергеевна</h1>
+                <p class="hero__subtitle">Студент группы ЭУз-555</p>
+
+                <p class="hero__text">
+                 	Увлеченный и целеустремленный специалист с активной жизненной позицией.
+					Способна быстро находить эффективные решения сложных задач в области автоматизации бизнеса. Легко устанавливаю контакт с людьми, поддерживаю деловые и профессиональные отношения. Стремлюсь к постоянному развитию, углублению знаний и применению их на практике. Умею эффективно работать в режиме многозадачности, уделяя внимание деталям.
+					<br>В свободное время увлекаюсь чтением книг, сборкой алмазной мозаикой и прослушиванием музыки, что помогает поддерживать концентрацию и находить новые идеи.
+					<ul type="square">Проектирование, разработка и сопровождение программного обеспечения:
+						<li>Опыт разработки на C# с использованием MS SQL и MS Access, и технологий WPF и WindowsForm .NetFramework.</li>
+						<li>Опыт разработки сайтов с использованием HTML, JavaScript, PHP, CSS.</li>
+						<li>Базовые знания языка программирования Kotlin.</li>
+					</ul>
+					Дополнительные знания языков програмирования: C, C++, Visual Basic, VBA.
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Корнева А.С. Все права защищены.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

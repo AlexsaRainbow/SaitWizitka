@@ -1,0 +1,465 @@
+@charset "utf-8";
+/* ===== Сбросы ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+    background: #f5f7fa;
+    color: #000000;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* ===== Шапка ===== */
+.header {
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+/* ===== Логотип ===== */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo__img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.logo__text {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0024F9;
+    letter-spacing: 0.5px;
+}
+
+/* ===== Меню ===== */
+.nav__list {
+    display: flex;
+    list-style: none;
+    gap: 4px;
+}
+
+.nav__item {
+    position: relative; /* чтобы выпадающее меню позиционировалось от пункта */
+}
+
+.nav__link {
+    display: block;
+    padding: 10px 16px;
+    color: #2c3e50;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+    white-space: nowrap;
+}
+
+.nav__link:hover {
+    background:hsla(183,100%,50%,0.85);
+    color: #000000;
+}
+
+.nav__link.active {
+	background:hsla(187,100%,48%,1.00);
+	color:#000000;
+}
+
+.caret {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+/* ===== Выпадающее меню (чистый CSS) ===== */
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    min-width: 220px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
+    padding: 8px;
+    margin-top: 6px;
+
+    /* Скрыто по умолчанию */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+}
+
+.dropdown li a {
+    display: block;
+    padding: 10px 14px;
+    color: #2c3e50;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.dropdown li a:hover {
+    background:hsla(183,100%,50%,0.85);
+    color: #000000;
+}
+
+/* Показываем при наведении на родительский <li>
+   и при фокусе внутри него (доступность с клавиатуры) */
+.nav__item--dropdown:hover .dropdown,
+.nav__item--dropdown:focus-within .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* ===== Основной контент ===== */
+.main {
+    flex: 1;
+    padding: 60px 0;
+}
+
+/* ===== Hero ===== */
+.hero {
+    display: grid;
+    grid-template-columns: 320px auto;
+    gap: 50px;
+    align-items: center;
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== Hero ===== */
+.hero1 {
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.hero__photo img {
+    width: 100%;
+    border-radius: 16px;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 3 / 4;
+    background: #e0e0e0;
+}
+
+.hero__title {
+    font-size: 36px;
+    margin-bottom: 8px;
+    color: #1a2b3c;
+}
+
+.hero__subtitle {
+    color: #0024F9;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.hero__text {
+    color:hsla(0,0%,0%,1.00);
+    margin-bottom: 20px;
+}
+
+.hero__facts {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.hero__facts li {
+    padding: 6px 0;
+    color: #4a5a6a;
+}
+
+
+
+/* ===== Подвал ===== */
+.footer {
+    background: #1a2b3c;
+    color: #cfd8dc;
+    padding: 24px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* ===== Общий заголовок страницы ===== */
+.page-title {
+    font-size: 40px;
+    color: #1a2b3c;
+    margin-bottom: 10px;
+}
+
+.page-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #0024F9;
+    border-radius: 2px;
+    margin-top: 12px;
+}
+
+.page-lead {
+    font-size: 17px;
+    color:hsla(0,0%,0%,1.00);
+    margin-bottom: 40px;
+    max-width: 700px;
+}
+
+/* ===== Карточки проектов ===== */
+.cards {
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(200px, auto));
+    gap: 24px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 6px 20px rgba(40,187,189,0.68);
+    transition: transform 0.25s, box-shadow 0.25s;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-shadow: 0 6px 20px rgba(40,187,189,0.68);
+}
+
+.link-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.link-item {
+    display: flex;
+    gap: 22px;
+    align-items: flex-start;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 26px 30px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.25s, box-shadow 0.25s;
+    border-left: 4px solid #0024F9;
+}
+
+.link-item:hover {
+    transform: translateX(4px);
+    box-shadow: 0 12px 30px rgba(0, 36, 249, 0.12);
+}
+
+.link-item__icon {
+    font-size: 40px;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.link-item__body {
+    flex-grow: 1;
+}
+
+.link-item__title {
+    font-size: 20px;
+    color: #1a2b3c;
+    margin-bottom: 8px;
+}
+
+.link-item__desc {
+    color: #4a5a6a;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.link-item__url {
+    display: inline-block;
+    color: #0024F9;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.2s;
+}
+
+.link-item__url:hover {
+    color: hsl(187, 100%, 40%);
+    text-decoration: underline;
+}
+
+.gallery {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Сцена (большое фото + описание) */
+.stage {
+    position: relative;
+    margin-bottom: 20px;
+    min-height: 420px;
+}
+
+.stage__item {
+    display: none;
+    margin: 0;
+    grid-template-columns: 320px auto;
+    gap: 30px;
+    align-items: start;
+	scroll-margin-top: 250px;
+}
+
+
+.stage__item:target {
+    display: grid;
+}
+
+.stage__item img,
+.stage__item .imgPhoto {
+    width: 100%;
+    height: auto;
+    max-height: 480px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    background: #e0e0e0;
+}
+
+/* Текстовый блок справа */
+.stage__info {
+    text-align: left;
+}
+
+.stage__info h3 {
+    font-size: 24px;
+    color: #1a2b3c;
+    margin-bottom: 12px;
+}
+
+.stage__info p {
+    color:hsla(0,0%,0%,1.00);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.thumbs-bar {
+    display: grid;
+    grid-template-columns: 46px auto 46px; /* стрелка | лента | стрелка */
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+/* Сама лента. Показываем ровно 4 плитки */
+.thumbs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+
+
+
+
+.thumbs__link {
+    display: none;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid transparent;
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.thumbs__link.visible {
+    display: block;
+}
+
+.thumbs__link img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    background: #e0e0e0;
+}
+
+.thumbs__link img.imgA {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    display: block;
+    background: #e0e0e0;
+    border-radius: 6px;
+}
+
+
+.thumbs__link:hover {
+    border-color: #0024F9;
+    transform: translateY(-2px);
+}
+
+/* Стрелки */
+.thumbs__arrow {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: inherit;
+    font-size: 32px;
+    line-height: 1;
+    font-weight: 700;
+
+    color: #0024F9;
+    background: #ffffff;
+    border: 2px solid #0024F9;
+    border-radius: 50%;
+    cursor: pointer;
+
+    transition: background 0.2s, color 0.2s, transform 0.2s, opacity 0.2s;
+    user-select: none;
+}
+
+.thumbs__arrow:hover:not(:disabled) {
+    background: #0024F9;
+    color: #ffffff;
+    transform: scale(1.08);
+}
+
+.thumbs__arrow:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+

@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Проекты</title>
+<link href="styleIndex.css" rel="stylesheet" type="text/css">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+	<!-- Шапка (такая же, как на главной, меняем только active) -->
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Логотип" class="logo__img">
+                <span class="logo__text">Мой сайт</span>
+            </a>
+
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Главная</a></li>
+                    <li><a href="projects.html" class="nav__link active">Проекты</a></li>
+                    <li><a href="study.html" class="nav__link">Учебные сайты</a></li>
+                    <li class="nav__item nav__item--dropdown">
+                        <a href="photos.html" class="nav__link">
+                            Фотоальбомы <span class="caret">▾</span>
+                        </a>
+                        <ul class="dropdown">
+                           <li><a href="characters.html">Любимые персонажи</a></li>
+                            <li><a href="books.html">Любимые книги</a></li>
+                            <li><a href="anime.html">Любимые аниме</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Контент -->
+    <main class="main">
+        <div class="hero1  container">
+            <h1 class="page-title">Мои проекты</h1>
+            <p class="page-lead">
+                Здесь собраны работы, которые я делал в рамках учёбы,
+				научно-исследовательской деятельности, будущем дипломном проекте и других сферах жизни.
+            </p>
+
+            <!-- Сетка карточек -->
+            <div class="cards">
+
+                <div class="card">
+					<div class="card__badge">Курсовая</div>
+                    <h2 class="card__title">Сетевая карточная игра на двоих игроков «21»</h2>
+                    <p class="card__text">
+                      Разработанная сетевая карточная игра «21», которая позволяет в локальной сети двум игрокам, опробовать свои стратегические способности и испытать удачу в игре.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card__badge">НИР</div>
+                    <h2 class="card__title">Миграция данных Axapta в 1С:ERP: решение для производственного учета.</h2>
+                    <p class="card__text">
+                       Разработана обработка «ЗагрузкаРС.epf» для переноса данных из Microsoft Dynamics AX (Axapta) в 1С:ERP Управление предприятием 2, в рамках перехода на отечественное ПО.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card__badge">Диплом</div>
+                    <h2 class="card__title">Разработка программного приложения для управления личными заметками на базе Android с элементами планирования и визуализации данных</h2>
+                    <p class="card__text">
+                       Мобильное офлайн-приложение для ведения заметок и планирования. Пользователь создаёт заметки из текстовых и графических блоков, форматирует текст, прикрепляет картинки и привязывает записи к календарю. Всё хранится локально на телефоне – интернет не нужен.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Корнева А.С. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>
